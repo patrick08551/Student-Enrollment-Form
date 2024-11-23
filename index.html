@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Enrollment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 50vh;
+        }
+
+        .form-container {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 1450px;
+            width: 1450%;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333333;
+        }
+
+        ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 20px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        .content-table {
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .content-table th,
+        .content-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        .content-table th {
+            background-color: #a37878;
+            font-weight: bold;
+        }
+
+        .content-table tbody tr:nth-of-type(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="form-container">
+            <h1>Student Enrollment Form</h1>
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Fill in the blanks.</li>
+                <li>Check your interests.</li>
+                <li>Click "Enroll Now" to submit.</li>
+            </ol>
+
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="0" max="99" required>
+
+            <label for="sex">Sex</label>
+            <input type="radio" id="male" name="sex" value="Male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="sex" value="Female" required>
+            <label for="female">Female</label>
+
+            <label for="course">Course Option</label>
+            <select id="course" name="course" required>
+                <option value="" disabled selected>Select a course</option>
+                <option value="BTVTED">Bachelor of Technical Vocational Teachers Education (BTVTED)</option>
+                <option value="ABELS">Bachelor of Arts in English Language Studies (ABELS)</option>
+                <option value="BSSW">Bachelor of Science in Social Work (BSSW)</option>
+                <option value="BSA">Bachelor of Science in Accountancy (BSA)</option>
+                <option value="BSAIS">Bachelor of Science in Accounting Information Systems (BSAIS)</option>
+                <option value="BSE">Bachelor of Science in Entrepreneurship (BSE)</option>
+                <option value="BSIT">Bachelor of Science in Information and Technology (BSIT)</option>
+                <option value="BSPA">Bachelor of Science in Public Administration (BSPA)</option>
+                <option value="DHRM">Diploma in Hotel and Restaurant Management (DHRS)</option>
+            </select>
+
+            <label>Interests</label>
+            <input type="checkbox" id="web-development" name="interests" value="Web Development">
+            <label for="web-development">Web Development</label>
+            <input type="checkbox" id="data-science" name="interests" value="Data Science">
+            <label for="data-science">Data Science</label>
+            <input type="checkbox" id="networking" name="interests" value="Networking">
+            <label for="networking">Networking</label>
+            <input type="checkbox" id="graphic-design" name="interests" value="Graphic Design">
+            <label for="graphic-design">Graphic Design</label>
+            <input type="checkbox" id="cooking" name="interests" value="Cooking">
+            <label for="cooking">Cooking</label>
+
+            <button type="submit">Enroll Now!</button>
+        </div>
+    </form>
+
+    <h1>List of Students Enrolled</h1>
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Course</th>
+                <th>Interests</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>023A-54345</td>
+                <td>John Oliver Liwanag</td>
+                <td>isaakonghotdog@gmail.com</td>
+                <td>19</td>
+                <td>Male</td>
+                <td>BSIT</td>
+                <td>Networking</td>
+            </tr>
+            <tr>
+                <td>023A-03462</td>
+                <td>Joshua Denado</td>
+                <td>joshuadenado0304@gmail.com</td>
+                <td>20</td>
+                <td>Male</td>
+                <td>BSIT</td>
+                <td>Graphic Design</td>
+            </tr>
+            <tr>
+                <td>023A-045667</td>
+                <td>Aaron Faderagao</td>
+                <td>aaron_Nonchalant15@gmail.com</td>
+                <td>19</td>
+                <td>Male</td>
+                <td>BSIT</td>
+                <td>Graphic Design</td>
+            </tr>
+            <tr>
+                <td>023A-38630</td>
+                <td>Din Lienard Dudas</td>
+                <td>dudas4@gmail.com</td>
+                <td>20</td>
+                <td>Male</td>
+                <td>BSIT</td>
+                <td>Web Development</td>
+            </tr>
+            <tr>
+                <td>023A-18450</td>
+                <td>Joanne Juanane</td>
+                <td>batungbakalCanada08@gmail.com</td>
+                <td>19</td>
+                <td>Female</td>
+                <td>BSIT</td>
+                <td>Data Science</td>
+            </tr>
+            <tr>
+                <td>023A-15430</td>
+                <td>Angelica Castillo</td>
+                <td>Catty08@gmail.com</td>
+                <td>19</td>
+                <td>Female</td>
+                <td>BSIT</td>
+                <td>Graphic Design</td>
+            </tr>
+            <tr>
+                <td>023A-15440</td>
+                <td>Prince Agustines</td>
+                <td>Meowy08@gmail.com</td>
+                <td>19</td>
+                <td>Male</td>
+                <td>BSIT</td>
+                <td>Data Science</td>
+            </tr>
+            <tr>
+                <td>023A-16730</td>
+                <td>Avian cayle Inciong</td>
+                <td>hindimakausad78@gmail.com</td>
+                <td>19</td>
+                <td>Male</td>
+                <td>BSIT</td>
+                <td>Graphic Design</td>
+            </tr>
+            <tr>
+                <td>023A-17800</td>
+                <td>Sharlene Habito</td>
+                <td>shao_kinaibigan@gmail.com</td>
+                <td>19</td>
+                <td>Female</td>
+                <td>BSIT</td>
+                <td>Networking</td>
+            </tr>
+            <tr>
+                <td>023A-19890</td>
+                <td>Jeanne Nicole Gianan</td>
+                <td>CertifiedDelulu@gmail.com</td>
+                <td>19</td>
+                <td>Female</td>
+                <td>BSIT</td>
+                <td>Networking</td>
+            </tr>
+            <tr>
+                <td>023A-38900</td>
+                <td>Jhon Paul Cortes</td>
+                <td>Paula4@gmail.com</td>
+                <td>20</td>
+                <td>Male</td>
+                <td>BSIT</td>
+                <td>Web Development</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+</html>
